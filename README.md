@@ -26,6 +26,8 @@ AjoVault gives every Ajo group a digital home — with round tracking, payment s
 - 👤 Profile page with account overview
 
 ---
+## Screenshot
+![Dashboard](./screenshot/Dashboard.png)
 
 ## Tech Stack
 
