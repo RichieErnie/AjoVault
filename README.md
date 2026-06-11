@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
+# AjoVault 💰
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A digital group savings manager inspired by the Nigerian Ajo/Esusu cooperative savings system. Built to solve a real problem — millions of Nigerians manage their Ajo contributions with paper, WhatsApp, and mental math. AjoVault digitises the entire process.
 
-Currently, two official plugins are available:
+🔗 **Live site:(https://ajo-vault.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## The Problem
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ajo (also called Esusu or Contribution) is Nigeria's most popular informal savings system. A group of people contribute a fixed amount regularly, and each round one person collects the entire pot. Most groups still track this manually — leading to disputes, missed payments, and zero transparency.
 
-## Expanding the ESLint configuration
+## The Solution
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+AjoVault gives every Ajo group a digital home — with round tracking, payment status, payout history, and a live group preview before creation.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 📊 Dashboard with savings overview and active groups
+- 👥 Group management with round progress tracking
+- ✅ Per-member payment marking (admin only)
+- 📋 Payout history with filter tabs
+- ➕ Create group with live preview and form validation
+- 👤 Profile page with account overview
+
+---
+
+## Tech Stack
+
+- **React 18** — component-based UI
+- **TypeScript** — type-safe JavaScript
+- **Tailwind CSS** — utility-first styling
+- **Zustand** — global state management
+- **React Hook Form** — form handling
+- **Zod** — schema validation
+- **React Router v6** — client-side routing
+- **Vite** — build tool and dev server
+
+---
+
+## Run Locally
+
+```bash
+git clone https://github.com/RichieErnie/ajovault.git
+cd ajovault
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Project Structure
+src/
+├── components/    # Reusable UI components
+├── pages/         # Full screen views
+├── store/         # Zustand state management
+├── types/         # TypeScript interfaces
+├── data/          # Mock data
+└── utils/         # Helper functions
+
+---
+
+## Deployment
+
+Deployed on **Vercel**. Every push to `main` triggers an automatic redeploy.
+
+---
+
+## What's Next
+
+- [ ] Backend integration with real authentication
+- [ ] Member invite system via link or code
+- [ ] Push notifications for payment reminders
+- [ ] Light mode
+- [ ] Export payout history as PDF
+
+---
+
+Built with ❤️ in Nigeria by Richard Ogazi · [LinkedIn](https://linkedin.com/in/richardogazi) · [GitHub](https://github.com/RichieErnie)
